@@ -1,0 +1,135 @@
+.modal {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) scale(1);
+  transition: transform 300ms linear;
+  border-radius: 4px;
+  width: 528px;
+  box-shadow: 0 2px 1px 0 rgba(0, 0, 0, 0.2), 0 1px 1px 0 rgba(0, 0, 0, 0.14),
+    0 1px 3px 0 rgba(0, 0, 0, 0.12);
+  background: var(--bg-color);
+
+}  
+
+.modal-form {
+  display: block;
+  /* display: flex;
+  flex-direction: column; */
+  width: 100%;
+  padding: 40px 40px;
+
+
+  &__label {
+  display: block;
+  font-weight: 400;
+  font-size: 12px;
+  letter-spacing: 0.01em;
+  color: var(--secondary-color);
+  margin-bottom: 4px;
+}
+
+&__input { 
+  height: 40px;
+  display: block;
+  text-align: center;
+  border: 1px solid var(--border-modal-color);
+  border-radius: 4px;
+  width: 100%;
+  padding-top: 11px;
+  padding-bottom: 11px;
+  padding-left: 42px;
+  padding-right: 12px;
+  outline: transparent;
+  transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+margin-bottom: 10px;
+}
+
+&__field {
+  position: relative;
+}
+
+&__icon {
+  position: absolute;
+  display: inline-block;
+  top: 50%;
+  left: 12px;
+  transform: translateY(-50%);
+  transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+&__input:hover + &__icon {
+  fill: var(--bg-accent-color);
+ }
+
+&__input:focus + &__icon {
+  fill: var(--bg-accent-color);
+}
+
+&__input:focus,
+&__comment:focus {
+  border-color: var(--bg-accent-color);
+}
+
+&__input:hover,
+&__comment:hover {
+  border-color: var(--bg-accent-color);
+}
+
+&__input::placeholder,
+&__comment::placeholder {
+  font-weight: 400;
+  font-size: 12px;
+  letter-spacing: 0.01em;
+  color: var(--placeholder-color);
+}
+
+&__comment {
+  border: 1px solid var(--border-modal-color);
+  border-radius: 4px;
+  width: 100%;
+  min-height: 120px;
+  resize: none;
+  padding: 12px 16px;
+  outline: transparent;
+  margin-bottom: 20px;
+}
+
+&__policy {
+  position: relative;
+  display: flex;
+  align-items: center;
+  margin-left: 13px;
+  margin-bottom: 30px;
+}
+&__check-text {
+  display: block;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 1.71;
+  letter-spacing: 0.03em;
+  color: var(--secondary-color);
+}
+
+&__check-conditions {
+  display: inline-block;
+  text-decoration: underline;
+  text-decoration-skip-ink: none;
+  color: var(--accent-color);
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 1.71;
+  letter-spacing: 0.03em;
+}
+
+}
+
+.modal-title {
+  display: block;
+  font-size: 20px;
+  text-align: center;
+  margin-bottom: 12px;
+}
+
+
+
+
