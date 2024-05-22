@@ -1,6 +1,6 @@
 .benefits {
-  //  background-color: var(--bg-color);
-  background-color: gray;
+   background-color: var(--bg-color);
+  // background-color: gray;
   margin-left: auto;
   margin-right: auto;
   padding-top: 60px;
@@ -17,7 +17,6 @@
     }
     @media screen and (min-width: 768px) {
       display: flex;
-      // justify-content: center;
       flex-wrap: wrap;
     }
   }
