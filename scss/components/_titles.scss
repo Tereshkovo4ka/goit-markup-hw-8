@@ -1,11 +1,19 @@
 .section-title {
-  font-size: 36px;
+  font-size: 28px;
   text-align: center;
   margin-top: 0;
-  margin-bottom: 50px;
+  margin-bottom: 30px;
+  
+  @media screen and (min-width: 1200px) {
+    font-size: 36px;
+    margin-bottom: 50px;
+  }
 }
 
 .uppertitle--medium {
+ @media screen and (max-width:1199px){
+  text-align: center;
+ }
   font-size: 14px;
   text-transform: uppercase;
   color: var(--white-color);
@@ -13,9 +21,14 @@
   text-align: left;
 }
 
-.uppertitle--medium-dark{
+.uppertitle--medium-dark {
   font-size: 14px;
   text-transform: uppercase;
   margin-top: 0;
   margin-bottom: 10px;
+  text-align: center;
+
+  @media screen and (min-width: 768px) {
+    text-align: left;
+  }
 }

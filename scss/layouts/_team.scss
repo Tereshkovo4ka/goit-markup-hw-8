@@ -1,28 +1,46 @@
-
 .team {
-    margin: 0 auto;
-    background-color: var(--bg-light-color);
+  margin: 0 auto;
+  background-color: var(--bg-light-color);
+  padding-top: 60px;
+  padding-bottom: 60px;
+  
+  @media screen and (min-width: 1200px) {
     padding-top: 94px;
     padding-bottom: 94px;
+  }
 
-    
   &__list {
-    display: flex;
     text-align: center;
     margin-right: auto;
     margin-left: auto;
+
+    @media screen and (min-width: 768px) {
+      display: flex;
+      flex-wrap: wrap;
+      bottom: -15px;
+    }
   }
-  
+
   &__item {
-    margin-right: 30px;
     border-radius: 0 0 4px 4px;
     box-shadow: 0 2px 1px 0 rgba(0, 0, 0, 0.2), 0 1px 1px 0 rgba(0, 0, 0, 0.14),
       0 1px 3px 0 rgba(0, 0, 0, 0.12);
     background: var(--white-color);
   }
-  
-  &__item:last-child {
-    margin-right: 0;
+
+  &__item:not(:last-child) {
+    @media screen and (max-width: 767px) {
+      margin-bottom: 30px;
+    }
+  }
+  &__item {
+    @media screen and (min-width: 768px) {
+      width: calc((100% - 4 * 15px) / 2);
+      margin: 15px;
+    }
+    @media screen and (min-width: 1200px) {
+      width: calc((100% - 8 * 15px) / 4);
+    }
   }
 
   &__position {
@@ -48,6 +66,8 @@
     margin-top: 0;
     margin-bottom: 16px;
   }
-     
+
+  &__image {
+    width: 100%;
   }
-  
+}

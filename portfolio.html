@@ -14,45 +14,100 @@
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/modern-normalize/2.0.0/modern-normalize.min.css"
     />
-    <link rel="stylesheet" href="./css/styles.css" />
-    <link rel="stylesheet" href="./css/main.min.css">
+    <link rel="stylesheet" href="./css/main.min.css" />
   </head>
   <body>
+
     <header class="header">
       <div class="container header__container">
-        <nav class="header-nav">
+        <nav class="navygation">
           <a class="logo" href="">Web<span class="logo--dark">Studio</span></a>
-          <ul class="header-nav__list list">
-            <li class="header-nav__item">
-              <a class="header-nav__link link" href="./index.html">Студія</a>
-            </li>
-            <li class="header-nav__item">
-              <a class="header-nav__link link header-nav__link--current" href="./portfolio.html"
-                >Портфоліо</a
-              >
-            </li>
-            <li class="header-nav__item">
-              <a class="header-nav__link link" href="">Контакти</a>
-            </li>
-          </ul>
-        </nav>
+          <button
+            type="button"
+            class="navygation__menu-button"
+            aria-expanded="false"
+            aria-controls="menu-container"
+            data-menu-button
+          >
+            <svg
+              class="navygation__icon"
+              width="40"
+              height="40"
+              aria-label="Перемикач мобільного меню"
+            >
+              <use
+                class="navygation__icon-header-close"
+                href="./images/icons.svg#icon-header-close"
+              ></use>
+              <use
+                class="navygation__icon-header-menu"
+                href="./images/icons.svg#icon-header-menu"
+              ></use>
+            </svg>
+          </button>
 
-        <ul class="header-address list">
-          <li class="header-address__item">
-            <a class="header-address__link link" href="mailto:info@devstudio.com"
-              ><svg class="header-address__icon" width="16" height="12">
-                <use href="./images/icons.svg#icon-envelope"></use></svg
-              >info@devstudio.com</a
-            >
-          </li>
-          <li class="header-address__item">
-            <a class="header-address__link link" href="tel:+380961111111"
-              ><svg class="header-address__icon" width="10" height="16">
-                <use href="./images/icons.svg#icon-smartphone"></use></svg
-              >+38 096 111 11 11</a
-            >
-          </li>
-        </ul>
+          <div class="menu-container" id="menu-container" data-menu>
+            <div class="header-nav">
+              <ul class="header-nav__list list">
+                <li class="header-nav__item">
+                  <a class="header-nav__link link" href="./index.html"
+                    >Студія</a
+                  >
+                </li>
+                <li class="header-nav__item">
+                  <a
+                    class="header-nav__link link header-nav__link--current"
+                    href="./portfolio.html"
+                    >Портфоліо</a
+                  >
+                </li>
+                <li class="header-nav__item">
+                  <a class="header-nav__link link" href="">Контакти</a>
+                </li>
+              </ul>
+            </div>
+            <div class="header-address">
+              <ul class="header-address__list list">
+                <li class="header-address__item">
+                  <a
+                    class="header-address__link link"
+                    href="mailto:info@devstudio.com"
+                    ><svg class="header-address__icon" width="16" height="12">
+                      <use href="./images/icons.svg#icon-envelope"></use></svg
+                    >info@devstudio.com</a
+                  >
+                </li>
+                <li class="header-address__item">
+                  <a class="header-address__link link header-address__link--accent" href="tel:+380961111111"
+                    ><svg class="header-address__icon" width="10" height="16">
+                      <use href="./images/icons.svg#icon-smartphone"></use></svg
+                    >+38 096 111 11 11</a
+                  >
+                </li>
+              </ul>
+            </div>
+            <ul class="social-list list">
+              <li class="social-list__item">
+                <a class="social-list__link link" href="Instagram">
+                  Instagram<span class="social-list__separator">|</span></a
+                >
+              </li>
+              <li class="social-list__item">
+                <a class="social-list__link link" href="Twitter">
+                  Twitter<span class="social-list__separator">|</span></a
+                >
+              </li>
+              <li class="social-list__item">
+                <a class="social-list__link link" href=" Facebook">
+                  Facebook<span class="social-list__separator">|</span></a
+                >
+              </li>
+              <li class="social-list__item">
+                <a class="social-list__link link" href="LinkedIn"> LinkedIn</a>
+              </li>
+            </ul>
+          </div>
+        </nav> 
       </div>
     </header>
     <main>
@@ -71,10 +126,14 @@
               <button type="button" class="btn btn--secondary">Дизайн</button>
             </li>
             <li class="btn__item">
-              <button type="button" class="btn btn--secondary">Маркетинг</button>
+              <button type="button" class="btn btn--secondary">
+                Маркетинг
+              </button>
             </li>
             <li class="btn__item">
-              <button type="button" class="btn btn--secondary">Веб-сайти</button>
+              <button type="button" class="btn btn--secondary">
+                Веб-сайти
+              </button>
             </li>
           </ul>
 
@@ -82,7 +141,15 @@
             <li class="benefits__item">
               <a class="benefits__link link" href="">
                 <div class="benefits__thumb">
-                  <img src="./images/img(2-1).jpg" alt="Веб-сайт" width="370" />
+                  <img class="benefits__image"
+                  srcset="
+                  ./images/mobile/img(2-1)-M.jpg     1x,
+                  ./images/mobile/img(2-1)-2x-M.jpg  2x,
+                  ./images/tab/img(2-1)-T.jpg        1x,
+                  ./images/tab/img(2-1)-2x-T.jpg     2x,
+                  ./images/desktop/img(2-1)-D.jpg    1x,
+                  ./images/desktop/img(2-1)-2x-D.jpg 2x"
+                 src="./images/img(2-1)-M.jpg" alt="Веб-сайт" width="370" />
                   <p class="benefits__thumb-text">
                     Ресурс пропонує комплексні пропозиції з різним рівнем
                     функціоналу та сервісів. Все це дозволить відвідувачу
@@ -98,7 +165,16 @@
             <li class="benefits__item">
               <a class="benefits__link link" href="">
                 <div class="benefits__thumb">
-                  <img src="./images/img(2-2).jpg" alt="Дизайн" width="370" />
+                  <img class="benefits__image"
+                  srcset="
+                  ./images/mobile/img(2-2)-M.jpg     1x,
+                  ./images/mobile/img(2-2)-2x-M.jpg  2x,
+                  ./images/tab/img(2-2)-T.jpg        1x,
+                  ./images/tab/img(2-2)-2x-T.jpg     2x,
+                  ./images/desktop/img(2-2)-D.jpg    1x,
+                  ./images/desktop/img(2-2)-2x-D.jpg 2x"
+                  src="./images/img(2-2)-M.jpg" alt="Дизайн"
+                  width="370" />
                   <p class="benefits__thumb-text">
                     Ресурс пропонує комплексні пропозиції з різним рівнем
                     функціоналу та сервісів. Все це дозволить відвідувачу
@@ -117,7 +193,14 @@
             <li class="benefits__item">
               <a class="benefits__link link" href="">
                 <div class="benefits__thumb">
-                  <img src="./images/img(2-3).jpg" alt="Додаток" width="370" />
+                  <img class="benefits__image"
+                  srcset="
+                  ./images/mobile/img(2-3)-M.jpg     1x,
+                  ./images/mobile/img(2-3)-2x-M.jpg  2x,
+                  ./images/tab/img(2-3)-T.jpg        1x,
+                  ./images/tab/img(2-3)-2x-T.jpg     2x,
+                  ./images/desktop/img(2-3)-D.jpg    1x,
+                  ./images/desktop/img(2-3)-2x-D.jpg 2x" src="./images/img(2-3)-M.jpg" alt="Додаток" width="370" />
                   <p class="benefits__thumb-text">
                     Ресурс пропонує комплексні пропозиції з різним рівнем
                     функціоналу та сервісів. Все це дозволить відвідувачу
@@ -134,8 +217,15 @@
             <li class="benefits__item">
               <a class="benefits__link link" href="">
                 <div class="benefits__thumb">
-                  <img
-                    src="./images/img(2-4).jpg"
+                  <img class="benefits__image"
+                  srcset="
+                  ./images/mobile/img(2-4)-M.jpg     1x,
+                  ./images/mobile/img(2-4)-2x-M.jpg  2x,
+                  ./images/tab/img(2-4)-T.jpg        1x,
+                  ./images/tab/img(2-4)-2x-T.jpg     2x,
+                  ./images/desktop/img(2-4)-D.jpg    1x,
+                  ./images/desktop/img(2-4)-2x-D.jpg 2x"
+                    src="./images/img(2-4)-M.jpg"
                     alt="Маркетинг"
                     width="370"
                   />
@@ -155,7 +245,14 @@
             <li class="benefits__item">
               <a class="benefits__link link" href="">
                 <div class="benefits__thumb">
-                  <img src="./images/img(2-5).jpg" alt="Додаток" width="370" />
+                  <img class="benefits__image"
+                  srcset="
+                  ./images/mobile/img(2-5)-M.jpg     1x,
+                  ./images/mobile/img(2-5)-2x-M.jpg  2x,
+                  ./images/tab/img(2-5)-T.jpg        1x,
+                  ./images/tab/img(2-5)-2x-T.jpg     2x,
+                  ./images/desktop/img(2-5)-D.jpg    1x,
+                  ./images/desktop/img(2-5)-2x-D.jpg 2x" src="./images/img(2-5)-M.jpg" alt="Додаток" width="370" />
                   <p class="benefits__thumb-text">
                     Ресурс пропонує комплексні пропозиції з різним рівнем
                     функціоналу та сервісів. Все це дозволить відвідувачу
@@ -172,7 +269,15 @@
             <li class="benefits__item">
               <a class="benefits__link link" href="">
                 <div class="benefits__thumb">
-                  <img src="./images/img(2-6).jpg" alt="Веб-сайт" width="370" />
+                  <img class="benefits__image" 
+                  srcset="
+                  ./images/mobile/img(2-6)-M.jpg     1x,
+                  ./images/mobile/img(2-6)-2x-M.jpg  2x,
+                  ./images/tab/img(2-6)-T.jpg        1x,
+                  ./images/tab/img(2-6)-2x-T.jpg     2x,
+                  ./images/desktop/img(2-6)-D.jpg    1x,
+                  ./images/desktop/img(2-6)-2x-D.jpg 2x" 
+                  src="./images/img(2-6)-M.jpg" alt="Веб-сайт" width="370" />
                   <p class="benefits__thumb-text">
                     Ресурс пропонує комплексні пропозиції з різним рівнем
                     функціоналу та сервісів. Все це дозволить відвідувачу
@@ -189,7 +294,14 @@
             <li class="benefits__item">
               <a class="benefits__link link" href="">
                 <div class="benefits__thumb">
-                  <img src="./images/img(2-7).jpg" alt="Дизайн" width="370" />
+                  <img class="benefits__image" 
+                  srcset="
+                  ./images/mobile/img(2-7)-M.jpg     1x,
+                  ./images/mobile/img(2-7)-2x-M.jpg  2x,
+                  ./images/tab/img(2-7)-T.jpg        1x,
+                  ./images/tab/img(2-7)-2x-T.jpg     2x,
+                  ./images/desktop/img(2-7)-D.jpg    1x,
+                  ./images/desktop/img(2-7)-2x-D.jpg 2x"src="./images/img(2-7)-M.jpg" alt="Дизайн" width="370" />
                   <p class="benefits__thumb-text">
                     Ресурс пропонує комплексні пропозиції з різним рівнем
                     функціоналу та сервісів. Все це дозволить відвідувачу
@@ -206,8 +318,15 @@
             <li class="benefits__item">
               <a class="benefits__link link" href="">
                 <div class="benefits__thumb">
-                  <img
-                    src="./images/img(2-8).jpg"
+                  <img class="benefits__image"
+                  srcset="
+                  ./images/mobile/img(2-8)-M.jpg     1x,
+                  ./images/mobile/img(2-8)-2x-M.jpg  2x,
+                  ./images/tab/img(2-8)-T.jpg        1x,
+                  ./images/tab/img(2-8)-2x-T.jpg     2x,
+                  ./images/desktop/img(2-8)-D.jpg    1x,
+                  ./images/desktop/img(2-8)-2x-D.jpg 2x"
+                    src="./images/img(2-8)-M.jpg"
                     alt="Маркетинг"
                     width="370"
                   />
@@ -227,7 +346,14 @@
             <li class="benefits__item">
               <a class="benefits__link link" href="">
                 <div class="benefits__thumb">
-                  <img src="./images/img(2-9).jpg" alt="Додаток" width="370" />
+                  <img class="benefits__image" 
+                  srcset="
+                  ./images/mobile/img(2-9)-M.jpg     1x,
+                  ./images/mobile/img(2-9)-2x-M.jpg  2x,
+                  ./images/tab/img(2-9)-T.jpg        1x,
+                  ./images/tab/img(2-9)-2x-T.jpg     2x,
+                  ./images/desktop/img(2-9)-D.jpg    1x,
+                  ./images/desktop/img(2-9)-2x-D.jpg 2x" src="./images/img(2-9)-M.jpg" alt="Додаток" width="370" />
                   <p class="benefits__thumb-text">
                     Ресурс пропонує комплексні пропозиції з різним рівнем
                     функціоналу та сервісів. Все це дозволить відвідувачу
@@ -248,8 +374,11 @@
     <!-- Footer -->
     <footer class="footer">
       <div class="container footer__container">
+        <div class="footer-nav">
         <div class="footer-main">
-          <a class="logo footer__logo" href="">Web<span class="logo--light">Studio</span></a>
+          <a class="logo footer__logo" href=""
+            >Web<span class="logo--light">Studio</span></a
+          >
           <address class="address">
             <p class="address__name">м. Київ, пр-т Лесі Українки, 26</p>
             <ul class="address__list list">
@@ -276,7 +405,11 @@
                 target="_blank"
                 rel="noopener noreferrer"
               >
-                <svg class="social__icon social__icon--white " width="20" height="20">
+                <svg
+                  class="social__icon social__icon--white"
+                  width="20"
+                  height="20"
+                >
                   <use href="./images/icons.svg#icon-instagram"></use>
                 </svg>
               </a>
@@ -288,7 +421,11 @@
                 target="_blank"
                 rel="noopener noreferrer"
               >
-                <svg class="social__icon social__icon--white " width="20" height="20">
+                <svg
+                  class="social__icon social__icon--white"
+                  width="20"
+                  height="20"
+                >
                   <use href="./images/icons.svg#icon-twitter"></use></svg
               ></a>
             </li>
@@ -299,7 +436,11 @@
                 target="_blank"
                 rel="noopener noreferrer"
               >
-                <svg class="social__icon social__icon--white " width="20" height="20">
+                <svg
+                  class="social__icon social__icon--white"
+                  width="20"
+                  height="20"
+                >
                   <use href="./images/icons.svg#icon-facebook"></use></svg
               ></a>
             </li>
@@ -310,23 +451,37 @@
                 target="_blank"
                 rel="noopener noreferrer"
               >
-                <svg class="social__icon social__icon--white " width="20" height="20">
+                <svg
+                  class="social__icon social__icon--white"
+                  width="20"
+                  height="20"
+                >
                   <use href="./images/icons.svg#icon-linkedin"></use></svg
               ></a>
             </li>
           </ul>
         </div>
+      </div>
+
         <form action="#" class="footer-form">
           <h2 class="uppertitle uppertitle--medium">Підпишіться на розсилку</h2>
           <div class="footer-form__input">
-          <input type="text" name="email-input" placeholder="E-mail" class="footer-form__text" />
-              <button class="footer-btn" type="submit">
-                <span class="footer-btn__text">Підписатися</span><svg class="footer-btn__icon" width="24" height="24">
+            <input
+              type="text"
+              name="email-input"
+              placeholder="E-mail"
+              class="footer-form__text"
+            />
+            <button class="footer-btn" type="submit">
+              <span class="footer-btn__text">Підписатися</span
+              ><svg class="footer-btn__icon" width="24" height="24">
                 <use href="./images/icons.svg#icon-send"></use>
-              </svg></button>
+              </svg>
+            </button>
           </div>
         </form>
       </div>
     </footer>
+    <script src="./js/menu.js"></script>
   </body>
 </html>
