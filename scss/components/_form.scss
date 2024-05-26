@@ -20,6 +20,16 @@
     outline: transparent;
     border: 1px solid rgba(255, 255, 255, 0.3);
     border-radius: 4px;
+    @media screen and (max-width:479px) {
+      width:100%;
+    }
+    @media screen and (min-width:480px) {
+     width:450px;
+    }
+    @media screen and (min-width:1200px) {
+      width:358px;
+    }
+
     width: 358px;
     height: 50px;
     padding: 16px;

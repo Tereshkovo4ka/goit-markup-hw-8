@@ -17,7 +17,6 @@
     <link rel="stylesheet" href="./css/main.min.css" />
   </head>
   <body>
-
     <header class="header">
       <div class="container header__container">
         <nav class="navygation">
@@ -78,7 +77,9 @@
                   >
                 </li>
                 <li class="header-address__item">
-                  <a class="header-address__link link header-address__link--accent" href="tel:+380961111111"
+                  <a
+                    class="header-address__link link header-address__link--accent"
+                    href="tel:+380961111111"
                     ><svg class="header-address__icon" width="10" height="16">
                       <use href="./images/icons.svg#icon-smartphone"></use></svg
                     >+38 096 111 11 11</a
@@ -107,7 +108,7 @@
               </li>
             </ul>
           </div>
-        </nav> 
+        </nav>
       </div>
     </header>
     <main>
@@ -141,15 +142,33 @@
             <li class="benefits__item">
               <a class="benefits__link link" href="">
                 <div class="benefits__thumb">
-                  <img class="benefits__image"
-                  srcset="
-                  ./images/mobile/img(2-1)-M.jpg     1x,
-                  ./images/mobile/img(2-1)-2x-M.jpg  2x,
-                  ./images/tab/img(2-1)-T.jpg        1x,
-                  ./images/tab/img(2-1)-2x-T.jpg     2x,
-                  ./images/desktop/img(2-1)-D.jpg    1x,
-                  ./images/desktop/img(2-1)-2x-D.jpg 2x"
-                 src="./images/img(2-1)-M.jpg" alt="Веб-сайт" width="370" />
+                  <picture class="benefits__picture">
+                    <sourse
+                      srcset="
+                     ./images/mobile/img(2-1)-M.jpg     1x,
+                      ./images/mobile/img(2-1)-2x-M.jpg  2x"
+                      media="(max-width: 767px)"
+                    />
+                    <sourse
+                      srcset="
+                      ./images/tab/img(2-1)-T.jpg        1x,
+                     ./images/tab/img(2-1)-2x-T.jpg     2x"
+                      media="(min-width: 768px)"
+                    />
+                    <sourse
+                      srcset="
+                      ./images/desktop/img(2-1)-D.jpg    1x,
+                      ./images/desktop/img(2-1)-2x-D.jpg 2x"
+                      media="(min-width: 1200px)"
+                    />
+                  </picture>
+
+                  <img
+                    class="benefits__image"
+                    src="./images/mobile/img(2-1)-M.jpg"
+                    alt="Веб-сайт"
+                    width="370"
+                  />
                   <p class="benefits__thumb-text">
                     Ресурс пропонує комплексні пропозиції з різним рівнем
                     функціоналу та сервісів. Все це дозволить відвідувачу
@@ -165,16 +184,33 @@
             <li class="benefits__item">
               <a class="benefits__link link" href="">
                 <div class="benefits__thumb">
-                  <img class="benefits__image"
-                  srcset="
+                  <picture class="benefits__picture">
+                    <sourse
+                      srcset="
                   ./images/mobile/img(2-2)-M.jpg     1x,
-                  ./images/mobile/img(2-2)-2x-M.jpg  2x,
+                  ./images/mobile/img(2-2)-2x-M.jpg  2x"
+                      media="(max-width: 767px)"
+                      <source
+                      srcset="
                   ./images/tab/img(2-2)-T.jpg        1x,
-                  ./images/tab/img(2-2)-2x-T.jpg     2x,
-                  ./images/desktop/img(2-2)-D.jpg    1x,
-                  ./images/desktop/img(2-2)-2x-D.jpg 2x"
-                  src="./images/mobile/img(2-2)-M.jpg" alt="Дизайн"
-                  width="370" />
+                  ./images/tab/img(2-2)-2x-T.jpg     2x"
+                      media="(min-width: 768px)"
+                    />
+                    <source
+                      srcset="
+                        ./images/desktop/img(2-2)-D.jpg    1x,
+                        ./images/desktop/img(2-2)-2x-D.jpg 2x
+                      "
+                      media="(min-width: 1200px)"
+                    />
+                  </picture>
+                  <img
+                    class="benefits__image"
+                    src="./images/mobile/img(2-2)-M.jpg"
+                    alt="Дизайн"
+                    width="370"
+                  />
+
                   <p class="benefits__thumb-text">
                     Ресурс пропонує комплексні пропозиції з різним рівнем
                     функціоналу та сервісів. Все це дозволить відвідувачу
@@ -193,14 +229,33 @@
             <li class="benefits__item">
               <a class="benefits__link link" href="">
                 <div class="benefits__thumb">
-                  <img class="benefits__image"
-                  srcset="
-                  ./images/mobile/img(2-3)-M.jpg     1x,
-                  ./images/mobile/img(2-3)-2x-M.jpg  2x,
-                  ./images/tab/img(2-3)-T.jpg        1x,
-                  ./images/tab/img(2-3)-2x-T.jpg     2x,
-                  ./images/desktop/img(2-3)-D.jpg    1x,
-                  ./images/desktop/img(2-3)-2x-D.jpg 2x" src="./images/mobile/img(2-3)-M.jpg" alt="Додаток" width="370" />
+                  <picture class="benefits__picture">
+                    <sourse
+                      srcset="
+                      ./images/mobile/img(2-3)-M.jpg     1x,
+                      ./images/mobile/img(2-3)-2x-M.jpg  2x"
+                      media="(max-width: 767px)"
+                      <source
+                      srcset="
+                      ./images/tab/img(2-3)-T.jpg        1x,
+                      ./images/tab/img(2-3)-2x-T.jpg     2x"
+                      media="(min-width: 768px)"
+                    />
+                    <source
+                      srcset="
+                        ./images/desktop/img(2-3)-D.jpg    1x,
+                        ./images/desktop/img(2-3)-2x-D.jpg 2x
+                      "
+                      media="(min-width: 1200px)"
+                    />
+                  </picture>
+
+                  <img
+                    class="benefits__image"
+                    src="./images/mobile/img(2-3)-M.jpg"
+                    alt="Додаток"
+                    width="370"
+                  />
                   <p class="benefits__thumb-text">
                     Ресурс пропонує комплексні пропозиції з різним рівнем
                     функціоналу та сервісів. Все це дозволить відвідувачу
@@ -217,14 +272,29 @@
             <li class="benefits__item">
               <a class="benefits__link link" href="">
                 <div class="benefits__thumb">
-                  <img class="benefits__image"
-                  srcset="
-                  ./images/mobile/img(2-4)-M.jpg     1x,
-                  ./images/mobile/img(2-4)-2x-M.jpg  2x,
-                  ./images/tab/img(2-4)-T.jpg        1x,
-                  ./images/tab/img(2-4)-2x-T.jpg     2x,
-                  ./images/desktop/img(2-4)-D.jpg    1x,
-                  ./images/desktop/img(2-4)-2x-D.jpg 2x"
+                  <picture class="benefits__picture">
+                    <sourse
+                      srcset="
+                      ./images/mobile/img(2-4)-M.jpg     1x,
+                      ./images/mobile/img(2-4)-2x-M.jpg  2x"
+                      media="(max-width: 767px)"
+                      <source
+                      srcset="
+                      ./images/tab/img(2-4)-T.jpg        1x,
+                      ./images/tab/img(2-4)-2x-T.jpg     2x"
+                      media="(min-width: 768px)"
+                    />
+                    <source
+                      srcset="
+                        ./images/desktop/img(2-4)-D.jpg    1x,
+                        ./images/desktop/img(2-4)-2x-D.jpg 2x
+                      "
+                      media="(min-width: 1200px)"
+                    />
+                  </picture>
+
+                  <img
+                    class="benefits__image"
                     src="./images/mobile/img(2-4)-M.jpg"
                     alt="Маркетинг"
                     width="370"
@@ -245,14 +315,34 @@
             <li class="benefits__item">
               <a class="benefits__link link" href="">
                 <div class="benefits__thumb">
-                  <img class="benefits__image"
-                  srcset="
-                  ./images/mobile/img(2-5)-M.jpg     1x,
-                  ./images/mobile/img(2-5)-2x-M.jpg  2x,
-                  ./images/tab/img(2-5)-T.jpg        1x,
-                  ./images/tab/img(2-5)-2x-T.jpg     2x,
-                  ./images/desktop/img(2-5)-D.jpg    1x,
-                  ./images/desktop/img(2-5)-2x-D.jpg 2x" src="./images/mobile/img(2-5)-M.jpg" alt="Додаток" width="370" />
+                  <picture class="benefits__picture">
+                    <sourse
+                      srcset="
+                      ./images/mobile/img(2-5)-M.jpg     1x,
+                      ./images/mobile/img(2-5)-2x-M.jpg  2x
+                      "
+                      media="(max-width: 767px)"
+                      <source
+                      srcset="
+                      ./images/tab/img(2-5)-T.jpg        1x,
+                      ./images/tab/img(2-5)-2x-T.jpg     2x"
+                      media="(min-width: 768px)"
+                    />
+                    <source
+                      srcset="
+                        ./images/desktop/img(2-5)-D.jpg    1x,
+                        ./images/desktop/img(2-5)-2x-D.jpg 2x
+                      "
+                      media="(min-width: 1200px)"
+                    />
+                  </picture>
+
+                  <img
+                    class="benefits__image"
+                    src="./images/mobile/img(2-5)-M.jpg"
+                    alt="Додаток"
+                    width="370"
+                  />
                   <p class="benefits__thumb-text">
                     Ресурс пропонує комплексні пропозиції з різним рівнем
                     функціоналу та сервісів. Все це дозволить відвідувачу
@@ -269,15 +359,35 @@
             <li class="benefits__item">
               <a class="benefits__link link" href="">
                 <div class="benefits__thumb">
-                  <img class="benefits__image" 
-                  srcset="
-                  ./images/mobile/img(2-6)-M.jpg     1x,
-                  ./images/mobile/img(2-6)-2x-M.jpg  2x,
-                  ./images/tab/img(2-6)-T.jpg        1x,
-                  ./images/tab/img(2-6)-2x-T.jpg     2x,
-                  ./images/desktop/img(2-6)-D.jpg    1x,
-                  ./images/desktop/img(2-6)-2x-D.jpg 2x" 
-                  src="./images/mobile/img(2-6)-M.jpg" alt="Веб-сайт" width="370" />
+                  <picture class="benefits__picture">
+                    <sourse
+                      srcset="
+                      ./images/mobile/img(2-6)-M.jpg     1x,
+                      ./images/mobile/img(2-6)-2x-M.jpg  2x
+                      "
+                      media="(max-width: 767px)"
+                      <source
+                      srcset="
+                      ./images/tab/img(2-6)-T.jpg        1x,
+                      ./images/tab/img(2-6)-2x-T.jpg     2x
+                     "
+                      media="(min-width: 768px)"
+                    />
+                    <source
+                      srcset="
+                        ./images/desktop/img(2-6)-D.jpg    1x,
+                        ./images/desktop/img(2-6)-2x-D.jpg 2x
+                      "
+                      media="(min-width: 1200px)"
+                    />
+                  </picture>
+
+                  <img
+                    class="benefits__image"
+                    src="./images/mobile/img(2-6)-M.jpg"
+                    alt="Веб-сайт"
+                    width="370"
+                  />
                   <p class="benefits__thumb-text">
                     Ресурс пропонує комплексні пропозиції з різним рівнем
                     функціоналу та сервісів. Все це дозволить відвідувачу
@@ -294,14 +404,35 @@
             <li class="benefits__item">
               <a class="benefits__link link" href="">
                 <div class="benefits__thumb">
-                  <img class="benefits__image" 
-                  srcset="
-                  ./images/mobile/img(2-7)-M.jpg     1x,
-                  ./images/mobile/img(2-7)-2x-M.jpg  2x,
-                  ./images/tab/img(2-7)-T.jpg        1x,
-                  ./images/tab/img(2-7)-2x-T.jpg     2x,
-                  ./images/desktop/img(2-7)-D.jpg    1x,
-                  ./images/desktop/img(2-7)-2x-D.jpg 2x" src="./images/mobile/img(2-7)-M.jpg" alt="Дизайн" width="370" />
+                  <picture class="benefits__picture">
+                    <sourse
+                      srcset="
+                      ./images/mobile/img(2-7)-M.jpg     1x,
+                      ./images/mobile/img(2-7)-2x-M.jpg  2x
+                      "
+                      media="(max-width: 767px)"
+                      <source
+                      srcset="
+                      ./images/tab/img(2-7)-T.jpg        1x,
+                      ./images/tab/img(2-7)-2x-T.jpg     2x,
+                     "
+                      media="(min-width: 768px)"
+                    />
+                    <source
+                      srcset="
+                        ./images/desktop/img(2-7)-D.jpg    1x,
+                        ./images/desktop/img(2-7)-2x-D.jpg 2x
+                      "
+                      media="(min-width: 1200px)"
+                    />
+                  </picture>
+
+                  <img
+                    class="benefits__image"
+                    src="./images/mobile/img(2-7)-M.jpg"
+                    alt="Дизайн"
+                    width="370"
+                  />
                   <p class="benefits__thumb-text">
                     Ресурс пропонує комплексні пропозиції з різним рівнем
                     функціоналу та сервісів. Все це дозволить відвідувачу
@@ -318,14 +449,29 @@
             <li class="benefits__item">
               <a class="benefits__link link" href="">
                 <div class="benefits__thumb">
-                  <img class="benefits__image"
-                  srcset="
-                  ./images/mobile/img(2-8)-M.jpg     1x,
-                  ./images/mobile/img(2-8)-2x-M.jpg  2x,
-                  ./images/tab/img(2-8)-T.jpg        1x,
-                  ./images/tab/img(2-8)-2x-T.jpg     2x,
-                  ./images/desktop/img(2-8)-D.jpg    1x,
-                  ./images/desktop/img(2-8)-2x-D.jpg 2x"
+                  <picture class="benefits__picture">
+                    <sourse
+                      srcset="
+                      ./images/mobile/img(2-8)-M.jpg     1x,
+                      ./images/mobile/img(2-8)-2x-M.jpg  2x"
+                      media="(max-width: 767px)"
+                      <source
+                      srcset="
+                      ./images/tab/img(2-8)-T.jpg        1x,
+                      ./images/tab/img(2-8)-2x-T.jpg     2x"
+                      media="(min-width: 768px)"
+                    />
+                    <source
+                      srcset="
+                        ./images/desktop/img(2-8)-D.jpg    1x,
+                        ./images/desktop/img(2-8)-2x-D.jpg 2x
+                      "
+                      media="(min-width: 1200px)"
+                    />
+                  </picture>
+
+                  <img
+                    class="benefits__image"
                     src="./images/mobile/img(2-8)-M.jpg"
                     alt="Маркетинг"
                     width="370"
@@ -346,14 +492,37 @@
             <li class="benefits__item">
               <a class="benefits__link link" href="">
                 <div class="benefits__thumb">
-                  <img class="benefits__image" 
-                  srcset="
-                  ./images/mobile/img(2-9)-M.jpg     1x,
-                  ./images/mobile/img(2-9)-2x-M.jpg  2x,
-                  ./images/tab/img(2-9)-T.jpg        1x,
-                  ./images/tab/img(2-9)-2x-T.jpg     2x,
-                  ./images/desktop/img(2-9)-D.jpg    1x,
-                  ./images/desktop/img(2-9)-2x-D.jpg 2x" src="./images/mobile/img(2-9)-M.jpg" alt="Додаток" width="370" />
+                  <picture class="benefits__picture">
+                    <sourse
+                      srcset="
+                      ./images/mobile/img(2-9)-M.jpg     1x,
+                      ./images/mobile/img(2-9)-2x-M.jpg  2x,
+                     
+                      "
+                      media="(max-width: 767px)"
+                      <source
+                      srcset="
+                      ./images/tab/img(2-9)-T.jpg        1x,
+                      ./images/tab/img(2-9)-2x-T.jpg     2x,
+                     
+                     "
+                      media="(min-width: 768px)"
+                    />
+                    <source
+                      srcset="
+                        ./images/desktop/img(2-9)-D.jpg    1x,
+                        ./images/desktop/img(2-9)-2x-D.jpg 2x
+                      "
+                      media="(min-width: 1200px)"
+                    />
+                  </picture>
+
+                  <img
+                    class="benefits__image"
+                    src="./images/mobile/img(2-9)-M.jpg"
+                    alt="Додаток"
+                    width="370"
+                  />
                   <p class="benefits__thumb-text">
                     Ресурс пропонує комплексні пропозиції з різним рівнем
                     функціоналу та сервісів. Все це дозволить відвідувачу
@@ -375,93 +544,93 @@
     <footer class="footer">
       <div class="container footer__container">
         <div class="footer-nav">
-        <div class="footer-main">
-          <a class="logo footer__logo" href=""
-            >Web<span class="logo--light">Studio</span></a
-          >
-          <address class="address">
-            <p class="address__name">м. Київ, пр-т Лесі Українки, 26</p>
-            <ul class="address__list list">
-              <li class="address__item">
-                <a class="address__link link" href="mailto:@devstudio.com"
-                  >@devstudio.com</a
+          <div class="footer-main">
+            <a class="logo footer__logo" href=""
+              >Web<span class="logo--light">Studio</span></a
+            >
+            <address class="address">
+              <p class="address__name">м. Київ, пр-т Лесі Українки, 26</p>
+              <ul class="address__list list">
+                <li class="address__item">
+                  <a class="address__link link" href="mailto:@devstudio.com"
+                    >@devstudio.com</a
+                  >
+                </li>
+                <li class="address__item">
+                  <a class="address__link link" href="tel:+380961111111"
+                    >+38 096 111 11 11</a
+                  >
+                </li>
+              </ul>
+            </address>
+          </div>
+          <div class="social">
+            <h2 class="uppertitle uppertitle--medium">приєднуйтесь</h2>
+            <ul class="social__list list">
+              <li class="social__item">
+                <a
+                  href=""
+                  class="social__link social__link--dark link"
+                  target="_blank"
+                  rel="noopener noreferrer"
                 >
+                  <svg
+                    class="social__icon social__icon--white"
+                    width="20"
+                    height="20"
+                  >
+                    <use href="./images/icons.svg#icon-instagram"></use>
+                  </svg>
+                </a>
               </li>
-              <li class="address__item">
-                <a class="address__link link" href="tel:+380961111111"
-                  >+38 096 111 11 11</a
+              <li class="social__item">
+                <a
+                  href=""
+                  class="social__link social__link--dark link"
+                  target="_blank"
+                  rel="noopener noreferrer"
                 >
+                  <svg
+                    class="social__icon social__icon--white"
+                    width="20"
+                    height="20"
+                  >
+                    <use href="./images/icons.svg#icon-twitter"></use></svg
+                ></a>
+              </li>
+              <li class="social__item">
+                <a
+                  href=""
+                  class="social__link social__link--dark link"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  <svg
+                    class="social__icon social__icon--white"
+                    width="20"
+                    height="20"
+                  >
+                    <use href="./images/icons.svg#icon-facebook"></use></svg
+                ></a>
+              </li>
+              <li class="social__item">
+                <a
+                  href=""
+                  class="social__link social__link--dark link"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  <svg
+                    class="social__icon social__icon--white"
+                    width="20"
+                    height="20"
+                  >
+                    <use href="./images/icons.svg#icon-linkedin"></use></svg
+                ></a>
               </li>
             </ul>
-          </address>
+          </div>
         </div>
-        <div class="social">
-          <h2 class="uppertitle uppertitle--medium">приєднуйтесь</h2>
-          <ul class="social__list list">
-            <li class="social__item">
-              <a
-                href=""
-                class="social__link social__link--dark link"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                <svg
-                  class="social__icon social__icon--white"
-                  width="20"
-                  height="20"
-                >
-                  <use href="./images/icons.svg#icon-instagram"></use>
-                </svg>
-              </a>
-            </li>
-            <li class="social__item">
-              <a
-                href=""
-                class="social__link social__link--dark link"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                <svg
-                  class="social__icon social__icon--white"
-                  width="20"
-                  height="20"
-                >
-                  <use href="./images/icons.svg#icon-twitter"></use></svg
-              ></a>
-            </li>
-            <li class="social__item">
-              <a
-                href=""
-                class="social__link social__link--dark link"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                <svg
-                  class="social__icon social__icon--white"
-                  width="20"
-                  height="20"
-                >
-                  <use href="./images/icons.svg#icon-facebook"></use></svg
-              ></a>
-            </li>
-            <li class="social__item">
-              <a
-                href=""
-                class="social__link social__link--dark link"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                <svg
-                  class="social__icon social__icon--white"
-                  width="20"
-                  height="20"
-                >
-                  <use href="./images/icons.svg#icon-linkedin"></use></svg
-              ></a>
-            </li>
-          </ul>
-        </div>
-      </div>
 
         <form action="#" class="footer-form">
           <h2 class="uppertitle uppertitle--medium">Підпишіться на розсилку</h2>
