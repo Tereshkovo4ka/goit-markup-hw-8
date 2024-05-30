@@ -8,6 +8,7 @@
   width: 100%;
   z-index: 1;
 
+
   &__menu-button {
     display: inline-flex;
     padding: 0;
@@ -18,11 +19,28 @@
     z-index: 1;
   }
 
-  &__menu-button:hover,
-  &__menu-button:focus  &__icon-header-menu {
+  &__menu-button.is-open &__icon-header-close {
+  position: fixed;
+  }
+
+  &__menu-button:hover &__icon-header-menu {
     fill: var(--accent-color);
     transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
   }
+  &__menu-button:focus &__icon-header-menu {
+    fill: var(--accent-color);
+    transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  }
+  &__menu-button:hover &__icon-header-close {
+    fill: var(--accent-color);
+    transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  }
+  &__menu-button:focus &__icon-header-close {
+    fill: var(--accent-color);
+    transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  }
+
+
 
   &__menu-button .navygation__icon-header-close {
     display: none;
@@ -45,7 +63,7 @@
 
 .header-nav {
   &__list {
-    margin-bottom: 306px;
+    // margin-bottom: 306px;
 
     @media screen and (min-width: 768px) {
       margin-bottom: 0;
@@ -149,10 +167,14 @@
     background-color: var(--bg-color);
     padding: 40px;
     &.is-open {
-      display: block;
+      // display: block;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      position: fixed;
       overflow-y: scroll;
-     } 
-   }
+     }
+    }
 
   @media screen and (min-width: 768px) {
     display: flex;
